@@ -13,3 +13,9 @@ class Warehouse:
         total_item = self.__warehouse.values()
         total_items_count = sum(total_item)
         return total_items_count
+
+    def __iter__(self):
+        items = self.__warehouse.items()
+        sorted_items = sorted(items)
+
+        return iter(sorted_items)
