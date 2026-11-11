@@ -12,6 +12,7 @@ class Warehouse:
     def __len__(self):
         total_item = self.__warehouse.values()
         total_items_count = sum(total_item)
+
         return total_items_count
 
     def __iter__(self):
