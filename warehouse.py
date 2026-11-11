@@ -20,3 +20,6 @@ class Warehouse:
         sorted_items = sorted(items)
 
         return iter(sorted_items)
+
+    def __contains__(self, item: str) -> bool:
+        return item in self.__warehouse
