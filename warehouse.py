@@ -3,13 +3,13 @@ class Warehouse:
         self.MISSING_ITEM_COUNT = 0
         self.__warehouse = {}
 
-    def __setitem__(self, item, count):
+    def __setitem__(self, item: str, count: int) -> None:
         self.__warehouse[item] = count
 
-    def __getitem__(self, item):
+    def __getitem__(self, item: str) -> int:
         return self.__warehouse.get(item, self.MISSING_ITEM_COUNT)
 
-    def __len__(self):
+    def __len__(self) -> int:
         total_item = self.__warehouse.values()
         total_items_count = sum(total_item)
 
